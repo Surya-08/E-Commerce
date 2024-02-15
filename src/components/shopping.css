@@ -1,0 +1,591 @@
+* {
+  box-sizing: border-box;
+}
+/* Homepage Overall default styles */
+.homePage {
+  background-color: #fffacd;
+  /* background-color: black; */
+  margin: auto;
+  max-width: 100%;
+}
+.homePage p {
+  /* color: whitesmoke; */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 550;
+  text-align: center;
+  margin: 5px 5px 5px 5px;
+}
+.homePage button {
+  border: none;
+}
+/* Navigation Bar */
+#shoppe {
+  background: linear-gradient(
+    90deg,
+    rgb(193, 16, 110),
+    tomato,
+    red,
+    purple,
+    blue
+  );
+  color: transparent;
+  background-clip: text;
+  font-size: 25px;
+  font-family: cursive;
+}
+.navigation {
+  background-color: gold;
+  margin: 10px 10px 10px 10px;
+  border-radius: 5px;
+  width: 100%;
+}
+.navigation ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.navigation li {
+  float: right;
+}
+.navigation a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  margin-top: 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.navigation li:hover {
+  background-color: rgb(243, 191, 60);
+}
+.newArrival {
+  background: linear-gradient(45deg, #e0531b, #d34015, #c72a12, #b90710);
+  color: transparent;
+  background-clip: text;
+  font-family: "Jokerman";
+  font-size: 50px;
+  margin: 20px 20px 20px 20px;
+}
+.nav-search {
+  width: 130px;
+  box-sizing: border-box;
+  border: 2px solid #f0f0f0;
+  border-radius: 7px;
+  font-size: 16px;
+  margin-left: 10px;
+  outline: none;
+  background-color: #f0f0f0;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.2s ease-in-out;
+}
+.nav-search:focus {
+  width: 100%;
+}
+/* To display home page UL */
+.ul-list {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-grow: initial;
+  flex-wrap: wrap;
+  align-items: stretch;
+  align-content: stretch;
+  margin: 0 -10px 0 0;
+  width: 100%;
+  padding: 0 0 0 0;
+  justify-content: space-around;
+}
+.categories-img {
+  width: 260px;
+  height: 210px;
+  /* aspect-ratio: 4/3; */
+  border-radius: 5px;
+  object-fit: cover;
+  text-align: left;
+  position: relative;
+  vertical-align: top;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 10px 10px;
+}
+/* Brand Logos and Offer text */
+.dicount-ad {
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: gold;
+  max-width: 100%;
+  padding: 15px 15px 15px 15px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  overflow: hidden;
+}
+#dicount-ad-para {
+  font-family: "Jokerman";
+  text-align: center;
+  font-weight: 100rem;
+  justify-content: center;
+}
+.brands-img-responsive {
+  max-width: 100%;
+  height: 50px;
+  object-fit: "cover";
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+}
+/* Products List styles */
+.catergoryList {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #f0f0f0;
+  /* background-color: black; */
+  border: #fffacd;
+  border-radius: 5px;
+  margin: 0px 20px 20px 20px;
+}
+.search-products {
+  background: #f0f0f0;
+  padding-top: 24px;
+  padding-left: 15px;
+  padding-right: 20px;
+}
+.row-class {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: stretch;
+}
+.product-info {
+  font-size: 10px;
+  line-height: 1.5;
+  background: #f0f0f0;
+  color: black;
+  margin-bottom: 20px;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.addtocart-btn {
+  height: 30px;
+  width: auto;
+  font-family: Arial;
+  font-size: medium;
+  background-color: gold;
+  margin-top: 5px;
+  border-radius: 5px;
+  color: black;
+}
+#buynow {
+  max-width: 100%;
+  margin: 20px 20px 10px 10px;
+  padding: 10px 20px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.cart-item-mainContainer {
+  display: block;
+  font-size: 16px;
+  border: 1px solid #eaeaec;
+  border-radius: 4px;
+  position: relative;
+  margin: 5px 0px;
+  /* left,right top bottom */
+  padding: 10px 12px 0;
+}
+.cart-items-left {
+  position: absolute;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.cart-items-right {
+  padding-left: 10px;
+  position: relative;
+  font-size: 14px;
+  font-weight: 550;
+  min-height: 140px;
+  margin-left: 200px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+#cart-item-input {
+  border: none;
+  text-align: center;
+  width: 20%;
+  font-size: 16px;
+  color: black;
+  background-color: #f0f0f0;
+  font-weight: 530;
+}
+#cart-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 5px;
+  object-fit: cover;
+  text-align: left;
+  /* position: relative; */
+  vertical-align: top;
+  overflow: hidden;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0 10px 0px 10px;
+}
+.cart-footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  letter-spacing: 1px;
+  padding: 12px 12px 0;
+  display: flex;
+  flex-wrap: wrap;
+  border: #fffacd;
+  border-radius: 5px;
+}
+#inc-dec-btn {
+  width: auto;
+  font-size: 16px;
+  border-radius: 3px;
+  color: black;
+}
+.cart-delete-btn {
+  height: 35px;
+  width: auto;
+  font-family: Arial;
+  font-size: 16px;
+  background-color: floralwhite;
+  border-radius: 5px;
+  margin-top: 10px;
+  color: black;
+}
+#outOfStock {
+  position: absolute;
+  bottom: 0px;
+  font-weight: 800;
+  width: 150px;
+  background-color: white;
+  color: tomato;
+  font-family: Arial;
+  letter-spacing: 1px;
+  margin: 0px 0px 0px 10px;
+}
+/* Order Summary */
+.total-items-count {
+  padding-bottom: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  border-bottom: 1px solid #f5f5f6;
+}
+.summary-details {
+  font-size: 16px;
+  font-weight: 600;
+}
+.summary-details span {
+  float: right;
+}
+.summary-details p {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+#proceed-to-payment-btn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 12px !important;
+}
+#total-price {
+  font-weight: 650;
+  font-size: 15px;
+}
+/* Checkout Address */
+.checkout-address-header {
+  font-size: 14px;
+  font-weight: 700;
+  margin: 12px 0px;
+  background: #bebebe;
+  width: 100%;
+  border-radius: 4px;
+  padding: 5px 5px;
+}
+.checkout {
+  color: black;
+  position: relative;
+  font-size: 12px;
+  display: inline-block;
+  width: 100%;
+}
+.checkout-label {
+  /* display: -webkit-box;
+  position: absolute; */
+  /* top: 11px;
+  left: 13px; */
+  /* display: flex;
+  justify-content: center; */
+  padding: 6px;
+  color: #94969f;
+  overflow: hidden;
+}
+
+.checkout-input {
+  /* display: flex;
+  align-items: center; */
+  width: 100%;
+  padding: 8px 10px;
+  background: transparent;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+  cursor: text;
+  outline: none;
+}
+/* Verify address card */
+#card {
+  /* display: inline-block;
+  box-sizing: border-box; */
+  box-shadow: 0 0 4px rgba(40, 44, 63, 0.2);
+  position: relative;
+  transition: 0.3s;
+  vertical-align: top;
+  background: azure;
+  width: 100% !important;
+  padding: 19px 16px 0px 48px;
+  /* margin-left: 2px; */
+  border-radius: 5px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+/* Sign Up/Login  */
+.signUp-container {
+  padding: 36px 36px 0;
+  background-color: #f0f0f0;
+}
+.signUp-container-btn {
+  float: left;
+  font-size: 30px;
+  font-weight: 600;
+  font-family: "Times New Roman", Times, serif;
+  border: none;
+  display: flex;
+  background: none !important;
+  justify-content: center;
+  align-items: center;
+}
+.login-content {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-weight: 600;
+}
+/* --------------------------------------- */
+@media (max-width: 400px) {
+  .homePage .cart-item-mainContainer {
+    flex-direction: column-reverse;
+  }
+  .catergoryList {
+    margin-bottom: 20px;
+  }
+}
+.img-responsive {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.product-images {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+.images-list {
+  list-style: none;
+}
+.third-div {
+  display: block;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+.brands-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: gold;
+  border-radius: 5px;
+  height: auto;
+  width: 100%;
+  margin: 20px 0px 20px 0px;
+  flex-direction: row;
+}
+.additional-para {
+  justify-content: center;
+  font-family: "Jokerman";
+  font-size: 20px;
+}
+
+.shipping-details {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+  margin: 5px 5px 5px 5px;
+}
+/* Form - details */
+.shipping-details li {
+  list-style: none;
+}
+@media screen and (max-width: 600px) {
+  .form {
+    width: auto;
+  }
+}
+.form p {
+  width: 100%;
+}
+.form label {
+  display: block;
+  width: 50%;
+  font-family: Arial;
+  font-size: 15px;
+}
+.form input {
+  display: block;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: darkgray;
+  cursor: pointer;
+  background-color: #f9f9f9;
+  border-radius: 5px;
+  /* margin: 5px 0px 5px 0px; */
+}
+.form button {
+  display: grid;
+  margin: auto;
+  height: 25px;
+  width: auto;
+}
+
+.prod-img-responsive {
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+}
+
+.product-list {
+  display: block;
+}
+.catergoryList-img {
+  float: left;
+  width: 33.33%;
+  margin: auto;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+.discount {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  background-color: gold;
+  font-family: "Jokerman Cursive";
+  font-size: 45px;
+  max-width: 100%;
+  margin: auto;
+}
+/* input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+} */
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  float: right;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .col-25,
+  .col-75,
+  input[type="submit"] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
