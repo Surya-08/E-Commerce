@@ -15,7 +15,7 @@ describe("Home Page of Shoppe APP", () => {
   });
 
   afterEach(cleanup);
-  test("should render order summary", async () => {
+  test("should render order summary", () => {
     render(
       <MemoryRouter>
         <Provider store={store}>

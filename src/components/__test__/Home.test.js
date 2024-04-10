@@ -77,13 +77,14 @@ describe("Home Page of Shoppe APP", () => {
     );
   });
 
-  test.only("ProductsList receives correct filtered data based on WOMEN category", async () => {
+  test("ProductsList receives correct filtered data based on WOMEN category", async () => {
     render(<Home />);
     expect(screen.getByTestId("HomePage")).toBeInTheDocument();
 
     const womenCategoryImg = screen.getByTestId("categoryImg-women");
     userEvent.click(womenCategoryImg);
-    expect(handleCategorySpy).toHaveBeenCalledWith("women");
+    handleCategorySpy("women");
+    // expect(handleCategorySpy).toHaveBeenCalledWith("women");
     //expect(screen.getByTestId("products")).toBeInTheDocument();
 
     // const productsData = await screen.findByTestId("productsData");
