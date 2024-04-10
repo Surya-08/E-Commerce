@@ -47,7 +47,6 @@ const Home = () => {
 
   return (
     <div className="homePage" data-testid="HomePage">
-      <SliderWithLabel />
       {allCategories && (
         <div className="catergoryList">
           <h1 className="newArrival">New Arrivals</h1>
