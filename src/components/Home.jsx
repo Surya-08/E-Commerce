@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import mockData from "../mockData/data";
 import { brandLogo } from "./brandlogo";
 import ProductsList from "./ProductsList";
-import SliderWithLabel from "./sliderLabel";
+// import SliderWithLabel from "./sliderLabel";
 
 const Home = () => {
   const [productData, setProductData] = useState([]);

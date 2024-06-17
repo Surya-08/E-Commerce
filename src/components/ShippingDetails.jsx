@@ -21,6 +21,10 @@ const ShippingDetails = () => {
 
   const handleChange = (name, value) => {
     setShippingInfo((previousValue) => ({ ...previousValue, [name]: value }));
+    if (!/^\d{5}$/.test(addressData.pincode)) {
+      console.error("Postal code should be 5 digits.");
+      return "hello";
+    }
   };
 
   const handleSubmit = () => {
