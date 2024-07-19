@@ -1,29 +1,30 @@
 import React, { useState } from "react";
 import "./shopping.css";
+import { Link } from "react-router-dom";
 
 const NavBar = () => {
   return (
     <div className="navigation">
       <ul>
         <li style={{ float: "left" }}>
-          <a href="/" id="shoppe">
+          <Link href="/" id="shoppe">
             Shoppe
-          </a>
+          </Link>
         </li>
         <li>
-          <a href="/profile">My Account</a>
+          <Link href="/profile">My Account</Link>
         </li>
         <li>
-          <a href="/signup">Sign Up</a>
+          <Link href="/signup">Sign Up</Link>
         </li>
         <li>
-          <a href="/checkout">Checkout</a>
+          <Link href="/checkout">Checkout</Link>
         </li>
         <li>
-          <a href="/cart">Cart</a>
+          <Link href="/cart">Cart</Link>
         </li>
         <li>
-          <a href="/home">Home</a>
+          <Link href="/">Home</Link>
         </li>
         <li>
           <label>

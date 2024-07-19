@@ -12,7 +12,7 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cartData = useSelector((state) => state.cartReducer);
-  const [productAvail, setProductAvail] = useState(5);
+  // const [productAvail, setProductAvail] = useState(5);
   const accessData = cartData.cartDetails;
 
   //To calculate total amount of cart Items even if quantity is increased or decreased

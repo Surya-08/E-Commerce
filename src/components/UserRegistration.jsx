@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import userMock from "../mockData/userdata";
 import userDetailsActions, {
-  addNewUserAction,
+  // addNewUserAction,
   userAuthAction,
 } from "../redux/actions/user-login-actions";
 
