@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import mockData from "../mockData/data";
 import { brandLogo } from "./brandlogo";
 import ProductsList from "./ProductsList";
-import CategoryList from "./__test__/common_components/CategoryList";
+// import CategoryList from "./__test__/common_components/CategoryList";
 // import SliderWithLabel from "./sliderLabel";
 
 const Home = () => {
@@ -52,7 +52,7 @@ const Home = () => {
         <div className="catergoryList">
           <h1 className="newArrival">New Arrivals</h1>
           <section style={{ width: "100%" }}>
-            <CategoryList />
+            {/* <CategoryList /> */}
             <ul className="ul-list">
               <li>
                 <img
