@@ -164,12 +164,12 @@ const Home = () => {
               <li>
                 <img
                   src="https://images.pexels.com/photos/3641059/pexels-photo-3641059.jpeg"
-                  alt="Jwellery"
+                  alt="Jewellery"
                   className="categories-img"
                   data-testid="categoryImg-jewelery"
                   onClick={() => handleCategory("jewelery")}
                 />
-                <p>Jwellery</p>
+                <p>Jewellery</p>
               </li>
               <li>
                 <img
@@ -205,13 +205,13 @@ const Home = () => {
             data-testid="productsData"
             productData={
               (filteredWomenData || filteredWomenMockData) &&
-              categoryName === "women"
+                categoryName === "women"
                 ? filteredWomenData
                 : filteredMensData && categoryName === "men"
-                ? filteredMensData
-                : filteredElectronics && categoryName === "electronics"
-                ? filteredElectronics
-                : filteredJwelery
+                  ? filteredMensData
+                  : filteredElectronics && categoryName === "electronics"
+                    ? filteredElectronics
+                    : filteredJwelery
             }
           />
         )}
