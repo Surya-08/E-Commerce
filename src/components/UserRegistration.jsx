@@ -52,7 +52,7 @@ const UserRegistration = () => {
     });
     dispatch(userDetailsActions(formData));
     dispatch(userAuthAction(true));
-    navigate("/home");
+    navigate("/");
   };
   const handlePassword = (e) => {
     setUserPwd(e.target.value);
@@ -61,7 +61,7 @@ const UserRegistration = () => {
   //handler function for login
   const handleContinue = () => {
     if (userPwd === existedUserData.password) {
-      navigate("/home");
+      navigate("/");
     }
     dispatch(userAuthAction(true));
   };

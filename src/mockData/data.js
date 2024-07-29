@@ -267,3 +267,42 @@ const mockData = [
 ];
 
 export default mockData;
+
+export const categoryImages = [
+  {
+    image: "https://images.pexels.com/photos/1536619/pexels-photo-1536619.jpeg",
+    title: "Women",
+  },
+  {
+    image: "https://images.pexels.com/photos/1306248/pexels-photo-1306248.jpeg",
+    title: "Men",
+  },
+  {
+    image: "https://images.pexels.com/photos/1094084/pexels-photo-1094084.jpeg",
+    title: "Kids",
+  },
+  {
+    image: "https://images.pexels.com/photos/3345882/pexels-photo-3345882.jpeg",
+    title: "Electronics",
+  },
+  {
+    image: "https://images.pexels.com/photos/1058770/pexels-photo-1058770.jpeg",
+    title: "Home Decor",
+  },
+  {
+    image: "https://images.pexels.com/photos/3641059/pexels-photo-3641059.jpeg",
+    title: "Jwellery",
+  },
+  {
+    image: "https://images.pexels.com/photos/1598505/pexels-photo-1598505.jpeg",
+    title: "Footwear",
+  },
+  {
+    image: "https://images.pexels.com/photos/6480707/pexels-photo-6480707.jpeg",
+    title: "Furniture",
+  },
+  // {
+  //   image: "https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg",
+  //   title: "Garderning Tools",
+  // },
+];

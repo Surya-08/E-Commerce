@@ -7,24 +7,24 @@ const NavBar = () => {
     <div className="navigation">
       <ul>
         <li style={{ float: "left" }}>
-          <Link href="/" id="shoppe">
+          <Link to="/" id="shoppe">
             Shoppe
           </Link>
         </li>
         <li>
-          <Link href="/profile">My Account</Link>
+          <Link to="/profile">My Account</Link>
         </li>
         <li>
-          <Link href="/signup">Sign Up</Link>
+          <Link to="/signup">Sign Up</Link>
         </li>
         <li>
-          <Link href="/checkout">Checkout</Link>
+          <Link to="/checkout">Checkout</Link>
         </li>
         <li>
-          <Link href="/cart">Cart</Link>
+          <Link to="/cart">Cart</Link>
         </li>
         <li>
-          <Link href="/">Home</Link>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <label>
