@@ -1,9 +1,8 @@
-import "./App.css";
 import Flow from "./routes/Flow";
 
 function App() {
   return (
-    <div>
+    <div className="bg-beige text-navy-blue">
       <Flow />
     </div>
   );
