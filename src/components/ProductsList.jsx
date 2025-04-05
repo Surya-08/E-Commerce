@@ -25,7 +25,7 @@ const ProductsList = ({ productData, category }) => {
   };
 
   return (
-    <div className="catergoryList" data-testid="productsData">
+    <div className="flex flex-wrap" data-testid="productsData">
       {category &&
         productData?.map((item) => (
           <div key={item.id}>
@@ -55,7 +55,7 @@ const ProductsList = ({ productData, category }) => {
                     ) : (
                       <button
                         onClick={() => handleAddToCart(item)}
-                        className="btn btn-primary bg-teal-600 border-none"
+                        className="btn backdrop-brightness-50 bg-teal-600 border-none"
                         data-testid="addButton"
                       >
                         Add to Cart
@@ -67,16 +67,13 @@ const ProductsList = ({ productData, category }) => {
             </section>
           </div>
         ))}
-      <section>
-        <button
-          id="buynow"
-          className="btn btn-primary bg-teal-600 border-none"
-          onClick={handleBuyNow}
-          data-testid="buyNow-btn"
-        >
-          Buy now
-        </button>
-      </section>
+      <button
+        className="btn backdrop-brightness-50 bg-teal-600 border-none absolute top-3/4 right-5"
+        onClick={handleBuyNow}
+        data-testid="buyNow-btn"
+      >
+        Buy now
+      </button>
     </div>
   );
 };

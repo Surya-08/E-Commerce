@@ -31,7 +31,9 @@ const VerifyAddress = () => {
             href="https://phonepe.my.site.com/login?locale=us"
             className="cart-footer"
           >
-            <button id="proceed-to-payment-btn">Continue to Payment</button>
+            <button className="btn backdrop-brightness-50 bg-teal-600 border-none my-3">
+              Continue to Payment
+            </button>
           </a>
         </div>
       </div>

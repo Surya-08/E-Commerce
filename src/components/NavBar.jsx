@@ -5,13 +5,14 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   return (
-    <nav>
+    <nav className="bg-teal-500">
       <div className="w-full flex items-center justify-between px-8 md:px-12 border-b-2 ">
         <div className="flex items-center space-x-1 uppercase">
           <Link href="/" id="shoppe">
             Byte Fusion
           </Link>
         </div>
+
         <div className="hidden md:block">
           <ul className="flex space-x-4 lg:space-x-8 md:text-md lg:text-lg items-center">
             <li>

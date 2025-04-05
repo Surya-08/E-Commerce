@@ -41,7 +41,7 @@ const Cart = () => {
         <p>Cart is empty!! Add products </p>
       ) : (
         <div className="flex flex-row gap-3">
-          <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
+          <ul className="list-none p-0">
             {accessData?.map((item) => (
               <li key={item.id}>
                 <div className="cart-item-mainContainer">
@@ -90,7 +90,7 @@ const Cart = () => {
                       <button
                         data-testid="del-button"
                         onClick={() => handleDelete(item.id)}
-                        className="btn btn-primary bg-teal-600 border-none"
+                        className="btn backdrop-brightness-50 hover:outline-teal-600 bg-teal-600 border-none my-2"
                       >
                         Delete
                       </button>
@@ -104,7 +104,7 @@ const Cart = () => {
             <OrderSummary accessData={accessData} finalPrice={finalPrice} />
             <div className="mx-auto pl-4">
               <button
-                className="btn btn-primary bg-teal-600 border-none"
+                className="btn backdrop-brightness-50 bg-teal-600 border-none"
                 onClick={handleProceedToPayment}
               >
                 Proceed to Buy

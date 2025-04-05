@@ -92,7 +92,7 @@ const UserRegistration = () => {
 
   return (
     <div
-      className="catergoryList"
+      className="w-6/12 mx-auto"
       style={{ padding: "20px 20px 20px 32px" }}
       data-testid="signUpPage"
     >
@@ -146,7 +146,7 @@ const UserRegistration = () => {
             </div>
             <button
               type="submit"
-              className="addtocart-btn"
+              className="btn backdrop-brightness-50 bg-teal-600 border-none my-3"
               onClick={handleSubmit}
               style={{ marginTop: "20px" }}
               disabled={isDisabled}
