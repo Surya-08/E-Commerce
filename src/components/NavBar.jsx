@@ -5,44 +5,11 @@ import { Link } from "react-router-dom";
 const NavBar = () => {
   const [isMenuClicked, setIsMenuClicked] = useState(false);
   return (
-    // <div className="navigation">
-    //   <ul>
-    //     <li style={{ float: "left" }}>
-    //       <Link to="/" id="shoppe">
-    //         Shoppe
-    //       </Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/profile">My Account</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/signup">Sign Up</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/checkout">Checkout</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/cart">Cart</Link>
-    //     </li>
-    //     <li>
-    //       <Link to="/">Home</Link>
-    //     </li>
-    //     <li>
-    //
-    //         <input
-    //           type="search"
-    //           className="nav-search"
-    //           placeholder="search"
-    //         ></input>
-    //       </label>
-    //     </li>
-    //   </ul>
-    // </div>
-    <nav className="bg-stone-400">
-      <div className="w-full flex items-center justify-between px-8 py-4 md:px-12 border-b-2 ">
+    <nav>
+      <div className="w-full flex items-center justify-between px-8 md:px-12 border-b-2 ">
         <div className="flex items-center space-x-1 uppercase">
           <Link href="/" id="shoppe">
-            Shoppe
+            Byte Fusion
           </Link>
         </div>
         <div className="hidden md:block">
@@ -54,12 +21,12 @@ const NavBar = () => {
                 placeholder="search"
               ></input>
             </li>
-            <li className="uppercase hover:text-yellow-500">
+            <li className="uppercase text-navy-blue font-semibold">
               <Link to="/" className="transition-all ease-out duration-300">
                 Home
               </Link>
             </li>
-            <li className="uppercase hover:text-yellow-500">
+            <li className="uppercase text-navy-blue font-semibold">
               <Link
                 to="wishlist"
                 className="transition-all ease-out duration-300 flex items-center"
@@ -79,7 +46,7 @@ const NavBar = () => {
                 </svg>
               </Link>
             </li>
-            <li className="uppercase hover:text-yellow-500">
+            <li className="uppercase text-navy-blue font-semibold">
               <Link
                 to="checkout"
                 className="transition-all ease-out duration-300 flex items-center"
@@ -97,7 +64,7 @@ const NavBar = () => {
                 </svg>
               </Link>
             </li>
-            <li className="uppercase hover:text-yellow-500">
+            <li className="uppercase text-navy-blue font-semibold">
               <Link
                 to="/signin"
                 className="transition-all ease-out duration-300"
@@ -105,7 +72,7 @@ const NavBar = () => {
                 Sign In
               </Link>
             </li>
-            <li className="uppercase hover:text-yellow-500">
+            <li className="uppercase border-2 p-2 rounded-md text-navy-blue  font-semibold">
               <Link
                 to="/signup"
                 className="transition-all ease-out duration-300"
@@ -126,11 +93,11 @@ const NavBar = () => {
               height="34"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#2a2924"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-x"
+              stroke="#1e264b"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-x"
             >
               <line x1="18" y1="6" x2="6" y2="18"></line>
               <line x1="6" y1="6" x2="18" y2="18"></line>
@@ -142,11 +109,11 @@ const NavBar = () => {
               height="34"
               viewBox="0 0 24 24"
               fill="none"
-              stroke="#2a2924"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="feather feather-menu"
+              stroke="#1e264b"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="feather feather-menu"
             >
               <line x1="3" y1="12" x2="21" y2="12"></line>
               <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -209,7 +176,7 @@ const NavBar = () => {
                 Sign In
               </Link>
             </li>
-            <li className="uppercase border-b-2">
+            <li className="uppercase border-b-2 ">
               <Link
                 to="/signup"
                 className="transition-all ease-out duration-300"
@@ -225,19 +192,3 @@ const NavBar = () => {
 };
 
 export default NavBar;
-
-export function App(props) {
-  const [click, setClick] = useState(false);
-  const handleToggle = () => {
-    setClick(!click);
-  };
-  return (
-    <div className="App">
-      <button id="toggle-btn" onClick={handleToggle}>
-        toggle
-      </button>
-      {!click ? <h1>Hello React.</h1> : <h1>Hello React. Toggled</h1>}
-      <h2>Start editing to see some magic happen!</h2>
-    </div>
-  );
-}
