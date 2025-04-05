@@ -35,14 +35,13 @@ const Cart = () => {
   const handleProceedToPayment = () => {
     navigate("/checkout");
   };
-  //To display out of stock when multiple users add same product with limited stock
 
   return (
     <div className="catergoryList" data-testid="cart-page">
       {accessData?.length === 0 ? (
         <p>Cart is empty!! Add products </p>
       ) : (
-        <div style={{ marginBottom: "30px" }}>
+        <div className="flex flex-row gap-3">
           <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
             {accessData?.map((item) => (
               <li key={item.id}>
@@ -61,14 +60,6 @@ const Cart = () => {
                     ) : (
                       <img src={item.image} alt={item.title} id="cart-img" />
                     )}
-                    {/* <img src={item.image} alt={item.title} id="cart-img" />
-                    {item.quantityCount > 5 && (
-                      <div style={{ margin: "5px 0px 5px 0px" }}>
-                        <b style={{ color: "red" }}>
-                          {item.title} is Out of Stock
-                        </b>
-                      </div>
-                    )} */}
                   </div>
                   <div className="cart-items-right">
                     <div id="total-price">{item.title}</div>
@@ -110,16 +101,12 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-
           <div>
-            <div>
-              <OrderSummary accessData={accessData} finalPrice={finalPrice} />
-            </div>
+            <OrderSummary accessData={accessData} finalPrice={finalPrice} />
           </div>
         </div>
       )}
-
-      <div className="cart-footer" style={{ margin: "0px" }}>
+      <div className="cart-footer">
         <button id="proceed-to-payment-btn" onClick={handleProceedToPayment}>
           Proceed to Buy
         </button>

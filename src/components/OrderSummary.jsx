@@ -5,30 +5,33 @@ const OrderSummary = ({ accessData, finalPrice }) => {
     return item + currentItem.quantityCount;
   }, 0);
   return (
-    <div className="cart-item-mainContainer" data-testid="order-summary">
-      <div>
+    <div
+      className="cart-item-mainContainer border-l border-black mx-4"
+      data-testid="order-summary"
+    >
+      <div className="flex flex-col gap-2">
         <div className="total-items-count">
           PRICE DETAILS ({totalItemsCount})
         </div>
-        <div className="summary-details">
+        <div className="font-bold">
           <div>
             <p>
-              Total MRP<span>&#8377;{finalPrice}</span>
+              Total MRP<span className="p-16">&#8377;{finalPrice}</span>
             </p>
             <p>
               Discount on MRP
-              <span style={{ color: "darkcyan" }}>&#8377;{50}</span>
+              <span className="p-3 text-cyan-700">&#8377;{50}</span>
             </p>
             <p>
-              Platform Fee<span style={{ color: "darkcyan" }}>FREE</span>
+              Platform Fee<span className="p-14 text-cyan-700">FREE</span>
             </p>
             <p>
-              Shipping Fee<span style={{ color: "darkcyan" }}>FREE</span>
+              Shipping Fee<span className="p-14 text-cyan-700">FREE</span>
             </p>
           </div>
           <hr />
           <div id="total-price">
-            Total Amount<span>&#8377;{finalPrice - 50}</span>
+            Total Amount<span className="p-14">&#8377;{finalPrice - 50}</span>
           </div>
         </div>
       </div>

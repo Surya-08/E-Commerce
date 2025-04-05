@@ -1,37 +1,20 @@
 import React, { useEffect, useState } from "react";
-import mockData from "../mockData/data";
+import mockData, { categoryImages } from "../mockData/data";
 import { brandLogo } from "./brandlogo";
 import ProductsList from "./ProductsList";
 import CategoryList from "./CategoryList";
-// import SliderWithLabel from "./sliderLabel";
 
 const Home = () => {
   const [productData, setProductData] = useState([]);
+  const [categorySelected, setCategorySelected] = useState();
   const [allCategories, setAllCategories] = useState(true);
-  const [categoryName, setCategoryName] = useState(null);
 
-  //To filter the products based on category
-  const filteredWomenData = productData.filter((item) => item.category);
-  console.log(filteredWomenData, "filterrr");
-  const filteredWomenMockData = mockData.filter(
-    (item) => item.category === `women's clothing`
-  );
-  const filteredMensData = productData.filter(
-    (item) => item.category === `men's clothing`
-  );
-  const filteredElectronics = productData.filter(
-    (item) => item.category === `electronics`
-  );
-  const filteredJwelery = productData.filter(
-    (item) => item.category === `jewelery`
-  );
-  //To display particular products on click of category
-  const handleCategory = (category) => {
-    setCategoryName(category);
+  const handleCategory = (value) => {
     setAllCategories(false);
+    setCategorySelected(value);
   };
 
-  //To get API data
+  //To display particular products on click of category
   useEffect(() => {
     fetch(`https://fakestoreapi.com/products`)
       .then((response) => {
@@ -40,29 +23,36 @@ const Home = () => {
       .then((data) => {
         return setProductData(data);
       })
-      .catch(() => {
+      .catch((err) => {
         return setProductData(mockData);
       });
   }, []);
 
+  const filteredProducts = productData.filter(
+    (product) => product?.category === categorySelected
+  );
   return (
     <div className="homePage" data-testid="HomePage">
       {allCategories && (
         <div className="catergoryList">
           <h1 className="newArrival">New Arrivals</h1>
-          <div className="categoryType">
-            <CategoryList
-              handleCategory={() => handleCategory(categoryName)}
-              categoryType={categoryName}
-            />
-            <div style={{ display: "flex" }}>
+          <div className="flex flex-wrap gap-2">
+            {categoryImages.map((item) => {
+              return (
+                <CategoryList
+                  key={item.category}
+                  categoryDisplay={item}
+                  handleCategory={() => handleCategory(item.category)}
+                />
+              );
+            })}
+            <div className="flex gap-1">
               <video
                 width="300"
                 controls={false}
                 loop
                 autoPlay
-                className="categories-img"
-                style={{ width: "320", height: "320" }}
+                className="w-2.6/12"
               >
                 <source
                   src="https://media.istockphoto.com/id/1409399882/video/winter-fabric-clothes-rack.mp4?s=mp4-640x640-is&k=20&c=cZJSr93j4iYi8fGuYexBrT48qGEwKu23HOQK06-ibBo="
@@ -70,8 +60,8 @@ const Home = () => {
                 />
                 Your browser does not support HTML5 video.
               </video>
-              <div className="dicount-ad">
-                <p id="dicount-ad-para">Get 30% off on all home decor items</p>
+              <div className="bg-teal-600 gap-1 rounded-md">
+                <p id="dicount-ad-para">Get 30% off on all top brands</p>
                 <div className="brand-alignments">
                   {brandLogo.map((item, id) => (
                     <div key={id} className="brands-img-responsive">
@@ -88,26 +78,16 @@ const Home = () => {
         </div>
       )}
       <div className="catergoryList" data-testid="products">
-        {categoryName && (
+        {!allCategories && (
           <ProductsList
             data-testid="productsData"
-            productData={
-              (filteredWomenData || filteredWomenMockData) && categoryName
-                ? filteredWomenData
-                : filteredMensData && categoryName === "men"
-                  ? filteredMensData
-                  : filteredElectronics && categoryName === "electronics"
-                    ? filteredElectronics
-                    : filteredJwelery
-            }
+            category={categorySelected}
+            productData={filteredProducts}
           />
         )}
       </div>
       {/* eslint-disable-next-line */}
-      <a
-        href="#"
-        style={{ alignContent: "center", margin: "20px 0px 20px 20px" }}
-      >
+      <a href="#" className="btn border-orange-900 text-center my-2 mx-2">
         Move to top
       </a>
     </div>
