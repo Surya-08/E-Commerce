@@ -34,7 +34,7 @@ const ShippingDetails = () => {
 
   return (
     <div data-testid="checkoutPage">
-      <div style={{ marginBottom: "50px" }}>
+      <div className="mb-5 w-6/12 mx-auto font-semibold text-black">
         {!verifyAddress ? (
           <div className="catergoryList">
             <div className="checkout-address-header">CONTACT DETAILS</div>
@@ -140,15 +140,13 @@ const ShippingDetails = () => {
                 onChange={(e) => handleChange("country", e.target.value)}
               />
             </div>
-            <div className="cart-footer" style={{ marginTop: "10px" }}>
-              <button
-                id="proceed-to-payment-btn"
-                onClick={handleSubmit}
-                data-testid="checkout-add-btn"
-              >
-                ADD ADDRESS
-              </button>
-            </div>
+            <button
+              className="btn backdrop-brightness-50 bg-teal-600 border-none my-3"
+              onClick={handleSubmit}
+              data-testid="checkout-add-btn"
+            >
+              ADD ADDRESS
+            </button>
           </div>
         ) : (
           <div>

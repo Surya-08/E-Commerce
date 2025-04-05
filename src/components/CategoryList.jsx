@@ -1,23 +1,18 @@
 import React from "react";
-import { categoryImages } from "../mockData/data";
 
-const CategoryList = ({ handleCategory, categoryType }) => {
+const CategoryList = ({ categoryDisplay, handleCategory }) => {
   return (
-    <div className="catergoryType">
-      {categoryImages.map((item) => {
-        return (
-          <div key={item} className="categoryDiv">
-            <img
-              src={item.image}
-              alt={`${item.title}`}
-              className="categories-img"
-              data-testid={`categoryImg-${categoryType}`}
-              onClick={() => handleCategory(`${categoryType}`)}
-            />
-            <p>{item.title}</p>
-          </div>
-        );
-      })}
+    <div className="flex flex-wrap gap-2">
+      <div key={categoryDisplay.title} className="categoryDiv">
+        <img
+          src={categoryDisplay.image}
+          alt={`${categoryDisplay.title}`}
+          className="categories-img cursor-pointer"
+          data-testid={`categoryImg-${categoryDisplay.category}`}
+          onClick={handleCategory}
+        />
+        <p>{categoryDisplay.title}</p>
+      </div>
     </div>
   );
 };

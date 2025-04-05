@@ -17,10 +17,9 @@
 }
 /* Homepage Overall default styles */
 .homePage {
-  background-color: #fffacd;
   /* background-color: black; */
   margin: auto;
-  max-width: 100%;
+  width: 100%;
 }
 .homePage p {
   /* color: whitesmoke; */
@@ -91,7 +90,6 @@
   font-size: 16px;
   margin-left: 10px;
   outline: none;
-  background-color: #f0f0f0;
   padding: 12px 20px 12px 40px;
   -webkit-transition: width 0.4s ease-in-out;
   transition: width 0.2s ease-in-out;
@@ -131,7 +129,6 @@
 .dicount-ad {
   justify-content: space-around;
   border-radius: 10px;
-  background-color: gold;
   width: 75%;
   padding: 15px;
   margin-bottom: 15px;
@@ -156,12 +153,9 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  background-color: #f0f0f0;
-  border: #fffacd;
   border-radius: 5px;
 }
 .search-products {
-  background: #f0f0f0;
   padding-top: 24px;
   padding-left: 15px;
   padding-right: 20px;
@@ -177,7 +171,6 @@
 .product-info {
   font-size: 10px;
   line-height: 1.5;
-  background: #f0f0f0;
   color: black;
   margin-bottom: 20px;
   font-weight: bold;
@@ -234,7 +227,6 @@
   width: 20%;
   font-size: 16px;
   color: black;
-  background-color: #f0f0f0;
   font-weight: 530;
 }
 #cart-img {
@@ -275,7 +267,6 @@
   width: auto;
   font-family: Arial;
   font-size: 16px;
-  background-color: floralwhite;
   border-radius: 5px;
   margin-top: 10px;
   color: black;
@@ -343,12 +334,6 @@
   width: 100%;
 }
 .checkout-label {
-  /* display: -webkit-box;
-  position: absolute; */
-  /* top: 11px;
-  left: 13px; */
-  /* display: flex;
-  justify-content: center; */
   padding: 6px;
   color: #94969f;
   overflow: hidden;
@@ -376,7 +361,6 @@
   position: relative;
   transition: 0.3s;
   vertical-align: top;
-  background: azure;
   width: 100% !important;
   padding: 19px 16px 0px 48px;
   /* margin-left: 2px; */
@@ -535,15 +519,6 @@
   max-width: 100%;
   margin: auto;
 }
-/* input[type="text"],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-} */
 
 label {
   padding: 12px 12px 12px 0;

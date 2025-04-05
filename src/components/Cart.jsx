@@ -12,7 +12,6 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cartData = useSelector((state) => state.cartReducer);
-  // const [productAvail, setProductAvail] = useState(5);
   const accessData = cartData.cartDetails;
 
   //To calculate total amount of cart Items even if quantity is increased or decreased
@@ -35,15 +34,14 @@ const Cart = () => {
   const handleProceedToPayment = () => {
     navigate("/checkout");
   };
-  //To display out of stock when multiple users add same product with limited stock
 
   return (
     <div className="catergoryList" data-testid="cart-page">
       {accessData?.length === 0 ? (
         <p>Cart is empty!! Add products </p>
       ) : (
-        <div style={{ marginBottom: "30px" }}>
-          <ul style={{ listStyle: "none", paddingLeft: "0px" }}>
+        <div className="flex flex-row gap-3">
+          <ul className="list-none p-0">
             {accessData?.map((item) => (
               <li key={item.id}>
                 <div className="cart-item-mainContainer">
@@ -61,14 +59,6 @@ const Cart = () => {
                     ) : (
                       <img src={item.image} alt={item.title} id="cart-img" />
                     )}
-                    {/* <img src={item.image} alt={item.title} id="cart-img" />
-                    {item.quantityCount > 5 && (
-                      <div style={{ margin: "5px 0px 5px 0px" }}>
-                        <b style={{ color: "red" }}>
-                          {item.title} is Out of Stock
-                        </b>
-                      </div>
-                    )} */}
                   </div>
                   <div className="cart-items-right">
                     <div id="total-price">{item.title}</div>
@@ -100,7 +90,7 @@ const Cart = () => {
                       <button
                         data-testid="del-button"
                         onClick={() => handleDelete(item.id)}
-                        className="cart-delete-btn"
+                        className="btn backdrop-brightness-50 hover:outline-teal-600 bg-teal-600 border-none my-2"
                       >
                         Delete
                       </button>
@@ -110,20 +100,19 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-
-          <div>
-            <div>
-              <OrderSummary accessData={accessData} finalPrice={finalPrice} />
+          <div className="flex flex-col gap-3">
+            <OrderSummary accessData={accessData} finalPrice={finalPrice} />
+            <div className="mx-auto pl-4">
+              <button
+                className="btn backdrop-brightness-50 bg-teal-600 border-none"
+                onClick={handleProceedToPayment}
+              >
+                Proceed to Buy
+              </button>
             </div>
           </div>
         </div>
       )}
-
-      <div className="cart-footer" style={{ margin: "0px" }}>
-        <button id="proceed-to-payment-btn" onClick={handleProceedToPayment}>
-          Proceed to Buy
-        </button>
-      </div>
     </div>
   );
 };
