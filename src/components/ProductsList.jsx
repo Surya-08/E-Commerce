@@ -55,7 +55,7 @@ const ProductsList = ({ productData, category }) => {
                     ) : (
                       <button
                         onClick={() => handleAddToCart(item)}
-                        className="btn btn-primary bg-teal-600"
+                        className="btn btn-primary bg-teal-600 border-none"
                         data-testid="addButton"
                       >
                         Add to Cart
@@ -67,10 +67,10 @@ const ProductsList = ({ productData, category }) => {
             </section>
           </div>
         ))}
-      <section className="">
+      <section>
         <button
           id="buynow"
-          className="btn btn-primary bg-teal-600"
+          className="btn btn-primary bg-teal-600 border-none"
           onClick={handleBuyNow}
           data-testid="buyNow-btn"
         >

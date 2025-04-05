@@ -12,7 +12,6 @@ const Cart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const cartData = useSelector((state) => state.cartReducer);
-  // const [productAvail, setProductAvail] = useState(5);
   const accessData = cartData.cartDetails;
 
   //To calculate total amount of cart Items even if quantity is increased or decreased
@@ -91,7 +90,7 @@ const Cart = () => {
                       <button
                         data-testid="del-button"
                         onClick={() => handleDelete(item.id)}
-                        className="cart-delete-btn"
+                        className="btn btn-primary bg-teal-600 border-none"
                       >
                         Delete
                       </button>
@@ -101,16 +100,19 @@ const Cart = () => {
               </li>
             ))}
           </ul>
-          <div>
+          <div className="flex flex-col gap-3">
             <OrderSummary accessData={accessData} finalPrice={finalPrice} />
+            <div className="mx-auto pl-4">
+              <button
+                className="btn btn-primary bg-teal-600 border-none"
+                onClick={handleProceedToPayment}
+              >
+                Proceed to Buy
+              </button>
+            </div>
           </div>
         </div>
       )}
-      <div className="cart-footer">
-        <button id="proceed-to-payment-btn" onClick={handleProceedToPayment}>
-          Proceed to Buy
-        </button>
-      </div>
     </div>
   );
 };
